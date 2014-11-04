@@ -1,85 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>SourceMod Plugin — </title>
-  
-  <script type='text/javascript' src='//code.jquery.com/jquery-2.0.2.js'></script>
-  
-  
-  
-  
-  <script type="text/javascript" src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.js"></script>
-  <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.css">
-  
-  <script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-    <script type='text/javascript' src="https://raw.githubusercontent.com/mattboldt/typed.js/master/js/typed.js"></script>
-  <link rel="stylesheet" type="text/css" href="terminal.css">
-  <link rel="stylesheet" type="text/css" href="main.css">
-  
+    
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>SourceMod Plugin —</title>
+        <script type='text/javascript' src='//code.jquery.com/jquery-2.0.2.js'></script>
+        <script type="text/javascript" src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.js"></script>
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.css">
+        <script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+        <script type='text/javascript' src="https://raw.githubusercontent.com/mattboldt/typed.js/master/js/typed.js"></script>
+        <link rel="stylesheet" type="text/css" href="terminal.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script type='text/javascript'>
+            //<![CDATA[ 
+            $(window).load(function() {
+                $("#typed").typed({
+                    strings: [
+                        '#include <sourcemod>'
+                    'public Plugin:myinfo ='
+                    '{'
+                    ' name = "Internet - Websites",'
+                    ' author = "NavyCommander",'
+                    ' description = "Yolo - Internet",'
+                    ' version = "1.0",'
+                    ' url = "N/A"'
+                    '}'
+                    ''
+                    'public OnPluginStart() {'
+                    '  RegConsoleCmd("sm_google", google, "Google");'
+                    '  RegConsoleCmd("sm_bing", bing, "Bing");'
+                    '}'
+                    ''
+                    '// Plugin Info'
+                    'public Action:info(client, args)'
+                    '{'
+                    ' ShowMOTDPanel(client, "[|GOOGLE|]", "http://Google.com", MOTDPANEL_TYPE_URL)'
+                    ' return Plugin_Handled;'
+                    '}'
+                    ''
+                    '// Google.com'
+                    'public Action:google(client, args)'
+                    '{'
+                    ' ShowMOTDPanel(client, "[|GOOGLE|]", "http://Google.com", MOTDPANEL_TYPE_URL)'
+                    ' return Plugin_Handled;'
+                    '}', ],
+                    // typing speed
+                    typeSpeed: -1,
+                    // time before typing starts
+                    startDelay: 0,
+                    // backspacing speed
+                    backSpeed: 0,
+                    // time before backspacing
+                    backDelay: 1,
+                    cursorChar: "_",
+                });
+            }); //]]>
+        </script>
+    </head>
+    
+    <body>
+        <div class="terminal-editor-wrap">
+            <div class="terminal-bar"><span class="title">Navy — Web.sp</span>
 
+            </div>
+            <div class="terminal-body"><span typed id="typed"></span><span class="typed-cursor"></span>
 
-<script type='text/javascript'>//<![CDATA[ 
-$(window).load(function(){
-$("#typed").typed({
-    strings: [
-'#include <sourcemod>'
-'public Plugin:myinfo ='
-'{'
-' name = "Internet - Websites",'
-' author = "NavyCommander",'
-' description = "Yolo - Internet",'
-' version = "1.0",'
-' url = "N/A"'
-'}'
-''
-'public OnPluginStart() {'
-'  RegConsoleCmd("sm_google", google, "Google");'
-'  RegConsoleCmd("sm_bing", bing, "Bing");'
-'}'
-''
-'// Plugin Info'
-'public Action:info(client, args)'
-'{'
-' ShowMOTDPanel(client, "[|GOOGLE|]", "http://Google.com", MOTDPANEL_TYPE_URL)'
-' return Plugin_Handled;'
-'}'
-''
-'// Google.com'
-'public Action:google(client, args)'
-'{'
-' ShowMOTDPanel(client, "[|GOOGLE|]", "http://Google.com", MOTDPANEL_TYPE_URL)'
-' return Plugin_Handled;'
-'}',
-        ],
-    // typing speed
-    typeSpeed: -1,
-    // time before typing starts
-    startDelay: 0,
-    // backspacing speed
-    backSpeed: 0,
-    // time before backspacing
-    backDelay: 1,
-    cursorChar: "_",
-});
-});//]]>  
-
-</script>
-
-
-</head>
-<body>
-  <div class="terminal-editor-wrap">
-    <div class="terminal-bar"><span class="title">Navy — Web.sp</span>
-
-    </div>
-    <div class="terminal-body"><span typed id="typed"></span><span class="typed-cursor"></span>
-
-    </div>
-</div>
-  
-</body>
-
+            </div>
+        </div>
+    </body>
 
 </html>
