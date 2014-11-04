@@ -17,61 +17,17 @@
             $(window).load(function() {
                 $("#typed").typed({
                     strings: [
-                        '#include <sourcemod>' +
-                        '\n' +
-                        'public Plugin:myinfo =' +
-                        '\n' +
-                        '{' +
-                        '\n' +
-                        ' name = "Internet - Websites",' +
-                        '\n' +
-                        ' author = "NavyCommander",' +
-                        '\n' +
-                        ' description = "Yolo - Internet",' +
-                        '\n' +
-                        ' version = "1.0",' +
-                        '\n' +
-                        ' url = "N/A"' +
-                        '\n' +
-                        '}' +
-                        '\n' +
-                        '\n' +
-                        '\n' +
-                        'public OnPluginStart() {' +
-                        '\n' +
-                        ' RegConsoleCmd("sm_google", google, "Google");' +
-                        '\n' +
-                        ' RegConsoleCmd("sm_bing", bing, "Bing");' +
-                        '\n' +
-                        '}' +
-                        '\n' +
-                        '\n' +
-                        '\n' +
-                        '// Plugin Info' +
-                        '\n' +
-                        'public Action:info(client, args)' +
-                        '\n' +
-                        '{' +
-                        '\n' +
-                        ' ShowMOTDPanel(client, "[|GOOGLE|]", "http://Google.com", MOTDPANEL_TYPE_URL)' +
-                        '\n' +
-                        ' return Plugin_Handled;' +
-                        '\n' +
-                        '}' +
-                        '\n' +
-                        '\n' +
-                        '\n' +
-                        '// Google.com' +
-                        '\n' +
-                        'public Action:google(client, args)' +
-                        '\n' +
-                        '{' +
-                        '\n' +
-                        ' ShowMOTDPanel(client, "[|GOOGLE|]", "http://Google.com", MOTDPANEL_TYPE_URL)' +
-                        '\n' +
-                        ' return Plugin_Handled;' +
-                        '\n' +
-                        '}', ],
+                        'What does this plugin do?!',
+                        'It Allows your users to do the following…'+
+                        '\n'+'\n'+'\n'+'\t'+
+                        "| Go to Google.com"+
+                        '\n'+'\n'+'\t'+
+                        "| Go to Bing.com"+
+                        '\n'+'\n'+'\t'+
+                        "| ................."+'\n'+
+                        "| And More Soon!"+'\n'+
+                        "| ................."+
+                        ],
                     // typing speed
                     typeSpeed: 0,
                     // time before typing starts
@@ -88,13 +44,23 @@
     
     <body>
         <div class="terminal-editor-wrap">
-            <div class="terminal-bar"><span class="title">Navy — Web.sp</span>
+            <div class="terminal-bar"><span class="title">
+                Web.sp
+                |Information|
+            </span>
 
             </div>
             <div class="terminal-body"><span typed id="typed" style="height: auto;"></span><span class="typed-cursor"></span>
-
+            
             </div>
         </div>
-    </body>
+<script>
+function OpenInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}
+</script>
+<div onclick="OpenInNewTab(https://raw.githubusercontent.com/NavyCo/Server/master/Scripting/Web.sp);">Download?</div>
+</body>
 
 </html>
