@@ -1,6 +1,10 @@
 /* @import(s) ! */
+ /* Ubuntu Family */
  @import url(http://fonts.googleapis.com/css?family=Ubuntu);
  @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+ /* Exo Family */
+ @import url(http://fonts.googleapis.com/css?family=Exo);
+ @import url(http://fonts.googleapis.com/css?family=Exo+2);
 
 /* Standard Body Font */
  body {
