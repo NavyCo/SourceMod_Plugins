@@ -10,6 +10,8 @@
 </div>
 */
  .terminal-editor-wrap {
+    height: auto;
+    width: auto;
     display: block;
     margin: auto;
     max-width: 10000px;
@@ -25,6 +27,8 @@
     transition: all 0.5s ease-out;
 }
 .terminal-bar {
+    height: auto;
+    width: auto;
     padding: 5px 0;
     font-family:"Lucida Grande", sans-serif;
     font-size: 0.75em;
@@ -38,7 +42,8 @@
     border-bottom: #6a6a6a 1px solid;
 }
 .terminal-body {
-    height: 250px;
+    height: auto;
+    width: auto;
     background-color: rgba(0, 0, 0, 0.85);
     padding: 10px;
     color: #f0f0f0;
