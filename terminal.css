@@ -12,8 +12,8 @@
  .terminal-editor-wrap {
     display: block;
     margin: auto;
-    max-width: 800px;
-    max-height: 800px;
+    max-width: 1000px;
+    max-height: 1000px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.8) 0px 20px 70px;
     clear: both;
