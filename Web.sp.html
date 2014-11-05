@@ -2,7 +2,10 @@
 <html>
 <script>
 function OpenInNewTab(url) {
-  var win = window.open(url, '_blank');
+  var win = window.open(
+url,
+'_blank' // <- This is what makes it open in a new window.
+);
   win.focus();
 }
 </script>
