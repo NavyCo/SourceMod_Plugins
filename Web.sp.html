@@ -1,75 +1,113 @@
+
 <!DOCTYPE html>
 <html>
-    <style>
-        @import url(http://prismjs.com/themes/prism-coy.css);
-    </style>
-    <script type='text/javascript' src="http://prismjs.com/prism.js"></script>
-    <script type='text/javascript' src="http://prismjs.com/plugins/line-numbers/prism-line-numbers.js"></script>
-    <script type='text/javascript' src="http://prismjs.com/utopia.js"></script>
-    <script type='text/javascript' src="http://prismjs.com/components.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://prismjs.com/plugins/line-numbers/prism-line-numbers.css">
-    <script type='text/javascript' src="https://raw.githubusercontent.com/LeaVerou/prism/gh-pages/plugins/autolinker/prism-autolinker.js"></script>
-    <script type='text/javascript' src="https://raw.githubusercontent.com/PixelsCommander/Download-File-JS/master/src/download.js"></script>
-    <script>
-        function OpenInNewTab(url) {
-            window.open(url, '_blank');
-        }
-    </script>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>SourceMod - Web.sp - jsFiddle demo</title>
+  
+  <script type='text/javascript' src='//code.jquery.com/jquery-2.0.2.js'></script>
+  
+  
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
     
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <title>SourceMod Plugin — Web.sp</title>
-        <script type='text/javascript' src='//code.jquery.com/jquery-2.0.2.js'></script>
-        <script type="text/javascript" src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.js"></script>
-        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.css">
-        <script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-        <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-        <script type='text/javascript' src="https://raw.githubusercontent.com/mattboldt/typed.js/master/js/typed.js"></script>
-        <link rel="stylesheet" type="text/css" href="terminal.css">
-        <link rel="stylesheet" type="text/css" href="main.css">
-        <script type='text/javascript'>
-            window.onload = function() {
-                $("#typed").typed({
-                    strings: [
-                        'What does this plugin do?!',
-                        'It Allows your users to do the following…' + '\n' + '\n' +
-                        '\t' + "| Go to Google.com" + '\n' +
-                        '\t' + "| Go to Bing.com",
-                        "Well the code was verry simple to create!",
-                        "Well the code was very simple to create! *" + '\n' +
-                        "Click the links below to retreive the plugin!!!"
+      <link rel="stylesheet" type="text/css" href="http://navyco.github.io/SourceMod_Plugins/main.css">
+    
+  
+    
+      <link rel="stylesheet" type="text/css" href="http://navyco.github.io/SourceMod_Plugins/terminal.css">
+    
+  
+    
+      <script type='text/javascript' src="http://prismjs.com/plugins/line-numbers/prism-line-numbers.js"></script>
+    
+  
+    
+      <script type='text/javascript' src="http://prismjs.com/prism.js"></script>
+    
+  
+    
+      <link rel="stylesheet" type="text/css" href="http://prismjs.com/themes/prism-coy.css">
+    
+  
+    
+      <script type='text/javascript' src="http://prismjs.com/utopia.js"></script>
+    
+  
+    
+      <script type='text/javascript' src="http://prismjs.com/components.js"></script>
+    
+  
+    
+      <link rel="stylesheet" type="text/css" href="http://prismjs.com/plugins/line-numbers/prism-line-numbers.css">
+    
+  
+    
+      <script type='text/javascript' src="https://raw.githubusercontent.com/LeaVerou/prism/gh-pages/plugins/autolinker/prism-autolinker.js"></script>
+    
+  
+    
+      <script type='text/javascript' src="https://raw.githubusercontent.com/PixelsCommander/Download-File-JS/master/src/download.js"></script>
+    
+  
+    
+      <script type='text/javascript' src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    
+  
+    
+      <script type='text/javascript' src="https://raw.githubusercontent.com/mattboldt/typed.js/master/js/typed.js"></script>
+    
+  
+  <style type='text/css'>
+    
+  </style>
+  
 
-                    ],
-                    // typing speed
-                    typeSpeed: 1,
-                    // time before typing starts
-                    startDelay: 0,
-                    // backspacing speed
-                    backSpeed: 10,
-                    // time before backspacing
-                    backDelay: 30,
-                    cursorChar: "_",
-                });
-            };
-        </script>
-    </head>
-    
-    <body>
-        <div class="terminal-editor-wrap">
-            <div class="terminal-bar"><span class="title">
+
+<script type='text/javascript'>//<![CDATA[ 
+$("#typed").click(function(){
+$("#typed").typed({
+    strings: ["Test", "Test2"],
+    // typing speed
+    typeSpeed: 1,
+    // time before typing starts
+    startDelay: 0,
+    // backspacing speed
+    backSpeed: 10,
+    // time before backspacing
+    backDelay: 30,
+    cursorChar: "_"
+});
+});//]]>  
+
+</script>
+
+
+</head>
+<body>
+  <script>
+    function OpenInNewTab(url) {
+        window.open(url, '_blank');
+    }
+</script>
+<body>
+    <div class="terminal-editor-wrap">
+        <div class="terminal-bar"><span class="title">
                 Web.sp
                 |Information|
             </span>
 
-            </div>
-            <div class="terminal-body"><span typed id="typed" style="height: auto;"></span><span class="typed-cursor"></span>
-
-            </div>
         </div>
-    </body>
-    <br>
-    <br>
-    <div> <span style="float:left">
+        <div class="terminal-body"><span typed id="typed" style="height: auto;"></span><span class="typed-cursor"></span>
+
+        </div>
+    </div>
+</body>
+<br>
+<br>
+<div> <span style="float:left">
      <p><a stlye="font-size:32px;" class="btn_blue_white_innerfade" onclick="downloadFile('http://navyco.github.io/SourceMod_Plugins/Download/Scripts/Web.sp');">Download .sp</a>
      <a stlye="font-size:32px;" class="btn_blue_white_innerfade" onclick="downloadFile('http://navyco.github.io/SourceMod_Plugins/Download/Scripts/Web.smx');">Download .smx</a></p>
  </span>
@@ -77,14 +115,12 @@
        <a stlye="font-size:32px;" class="btn_blue_white_innerfade" href="https://www.sourcemodplugins.org/">&lt;SM LIB&gt;</a>
    </span>
 
-    </div>
-
-</html>
+</div>
 <br>
 <br>
 <br>
 <pre class="line-numbers">
-<code class="language-text">#include &lt;sourcemod&gt;
+<code class="line-numbers language-javascript">#include &lt;sourcemod&gt;
 public Plugin:myinfo =
 {
  name = "Internet - Websites",
@@ -120,3 +156,12 @@ public Action:google(client, args)
  return Plugin_Handled;
 }
 </code></pre>
+
+
+</html>
+  
+</body>
+
+
+</html>
+
