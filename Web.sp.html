@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-<script>
-function OpenInNewTab(url) {
-  window.open(url, '_blank');
-}
-</script>
+    <script>
+        function OpenInNewTab(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+    
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <title>SourceMod Plugin — Web.sp</title>
@@ -17,25 +18,26 @@ function OpenInNewTab(url) {
         <link rel="stylesheet" type="text/css" href="terminal.css">
         <link rel="stylesheet" type="text/css" href="main.css">
         <script type='text/javascript'>
-        $("#typed").typed({
-            strings: [
-                'What does this plugin do?!',
-                'It Allows your users to do the following…' + '\n' + '\n' +
-                '\n' + '\t' + "| Go to Google.com" + '\n' + '\n' + '\t' +
-                "| Go to Bing.com" + '\n' + '\n' + '\t' +
-                "| ................." + '\n' + "| And More Soon!" + '\n' +
-                "| .................",
-            ],
-            // typing speed
-            typeSpeed: 1,
-            // time before typing starts
-            startDelay: 0,
-            // backspacing speed
-            backSpeed: 10,
-            // time before backspacing
-            backDelay: 30,
-            cursorChar: "_",
-        });
+            window.onload = function() {
+                $("#typed").typed({
+                    strings: [
+                        'What does this plugin do?!',
+                        'It Allows your users to do the following…' + '\n' + '\n' +
+                        '\n' + '\t' + "| Go to Google.com" + '\n' + '\n' + '\t' +
+                        "| Go to Bing.com" + '\n' + '\n' + '\t' +
+                        "| ................." + '\n' + "| And More Soon!" + '\n' +
+                        "| .................", ],
+                    // typing speed
+                    typeSpeed: 1,
+                    // time before typing starts
+                    startDelay: 0,
+                    // backspacing speed
+                    backSpeed: 10,
+                    // time before backspacing
+                    backDelay: 30,
+                    cursorChar: "_",
+                });
+            };
         </script>
     </head>
     
@@ -48,11 +50,13 @@ function OpenInNewTab(url) {
 
             </div>
             <div class="terminal-body"><span typed id="typed" style="height: auto;"></span><span class="typed-cursor"></span>
-            
+
             </div>
         </div>
-</body>
-<br><br>
+    </body>
+    <br>
+    <br>
 <a class="btn_green_white_innerfade" onclick="OpenInNewTab(https://raw.githubusercontent.com/NavyCo/Server/master/Scripting/Web.sp);">Download?</a>
+
 
 </html>
