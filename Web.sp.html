@@ -1,4 +1,3 @@
-@@ -1,122 +1,3 @@
 <!DOCTYPE html>
 <html>
     <style>
@@ -11,6 +10,13 @@
     <link rel="stylesheet" type="text/css" href="http://prismjs.com/plugins/line-numbers/prism-line-numbers.css">
     <script type='text/javascript' src="https://raw.githubusercontent.com/LeaVerou/prism/gh-pages/plugins/autolinker/prism-autolinker.js"></script>
     <script type='text/javascript' src="https://raw.githubusercontent.com/PixelsCommander/Download-File-JS/master/src/download.js"></script>
+    <script>
+        function OpenInNewTab(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+    
+    <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <title>SourceMod Plugin — Web.sp</title>
         <script type='text/javascript' src='//code.jquery.com/jquery-2.0.2.js'></script>
@@ -27,9 +33,8 @@
                     strings: [
                         'What does this plugin do?!',
                         'It Allows your users to do the following…' + '\n' + '\n' +
-                        '\t' + "[ !google  | Go to Google.com" + '\n' +
-                        '\t' + "[ !bing    | Go to Google.com" + '\n' +
-                        '\t' + "[ !steam   | Go to SteamCommunity.com",
+                        '\t' + "| Go to Google.com" + '\n' +
+                        '\t' + "| Go to Bing.com",
                         "Well the code was verry simple to create!",
                         "Well the code was very simple to create! *" + '\n' +
                         "Click the links below to retreive the plugin!!!"
@@ -79,52 +84,39 @@
 <br>
 <br>
 <pre class="line-numbers">
-<h5>Web.sp Plugin</h5>
 <code class="language-text">#include &lt;sourcemod&gt;
 public Plugin:myinfo =
 {
  name = "Internet - Websites",
  author = "NavyCommander",
  description = "Yolo - Internet",
- version = "2.15",
+ version = "1.0",
  url = "N/A"
 }
 
-
 public OnPluginStart() {
-  RegConsoleCmd("sm_google", google, "[-NAVY-] |WEB| Google");
-  RegConsoleCmd("sm_bing", bing, "[-NAVY-] |WEB| Bing");
-  RegConsoleCmd("sm_steam", steam, "[-NAVY-] |WEB| Steam");
-  RegConsoleCmd("sm_web", info, "Info about [-NAVY-]'s WEB");
+  RegConsoleCmd("sm_web", info, "[-Navy-] |WEB|");
+  RegConsoleCmd("sm_google", google, "[-Navy-] |WEB| Google");
+  RegConsoleCmd("sm_bing", bing, "[-Navy-] |WEB| Bing");
 }
-
 
 // Plugin Info
 public Action:info(client, args)
 {
- PrintToChat(client, "Navy's Web Plugin:");
- PrintToChat(client, "!Google")
- PrintToChat(client, "!Bing")
- PrintToChat(client, "!Steam")
+  PrintToChat(client, "This server has version of Navy's Web Plugin!"
 }
 
 
+// Plugin Bing
+public Action:bing(client, args)
+{
+ ShowMOTDPanel(client, "[|Bing|]", "http://Bing.com", MOTDPANEL_TYPE_URL)
+ return Plugin_Handled;
+}
 // Google.com
 public Action:google(client, args)
 {
  ShowMOTDPanel(client, "[|GOOGLE|]", "http://Google.com", MOTDPANEL_TYPE_URL)
- return Plugin_Handled;
-}
-// Bing.com
-public Action:bing(client, args)
-{
- ShowMOTDPanel(client, "[|BING|]", "http://Bing.com", MOTDPANEL_TYPE_URL)
- return Plugin_Handled;
-}
-// Steam
-public Action:steam(client, args)
-{
- ShowMOTDPanel(client, "[|SEAM|]", "https://SteamCommunity.com/", MOTDPANEL_TYPE_URL)
  return Plugin_Handled;
 }
 </code></pre>
