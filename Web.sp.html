@@ -37,7 +37,7 @@
                         '\t' + "| Go to Bing.com",
                         "Well the code was verry simple to create!",
                         "Well the code was very simple to create! *" + '\n' +
-                        "You'll need SM Lib installed! Click the links below to retreive it!"
+                        "Click the links below to retreive the plugin!!!"
 
                     ],
                     // typing speed
@@ -80,42 +80,11 @@
     </div>
 
 </html>
-<script>
-    Prism.languages.cfg = Prism.languages.extend('clike', {
-        'keyword': /\b(exec|ent_fire|ent_setname|ent_remove|setmodelscale|addoutput)\b/g,
-            'number': /\b-?(0x[\dA-Fa-f]+|\d*\.?\d+([Ee]-?\d+)?|NaN|-?Infinity)\b/g,
-            'entity': /\b(env_fire|prop_physics)\b/g,
-            'attr-value': /\b(angles|origin|solid|gravity|health|rendermode|renderamt|renderfx|color|sethealth|)\b/g,
-
-    });
-
-    Prism.languages.insertBefore('cfg', 'keyword', {
-        'regex': {
-            pattern: /(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\r\n])+\/[gim]{0,3}(?=\s*($|[\r\n,.;})]))/g,
-            lookbehind: true
-        }
-    });
-
-    if (Prism.languages.markup) {
-        Prism.languages.insertBefore('markup', 'tag', {
-            'script': {
-                pattern: /<script[\w\W]*?>[\w\W]*?<\/script>/ig,
-                inside: {
-                    'tag': {
-                        pattern: /<script[\w\W]*?>|<\/script>/ig,
-                        inside: Prism.languages.markup.tag.inside
-                    },
-                    rest: Prism.languages.cfg
-                }
-            }
-        });
-    }
-</script>
 <br>
 <br>
 <br>
 <pre class="line-numbers">
-<code class="language-cfg">#include <sourcemod>
+<code class="language-text">#include &lt;sourcemod&gt;
 public Plugin:myinfo =
 {
  name = "Internet - Websites",
@@ -126,17 +95,24 @@ public Plugin:myinfo =
 }
 
 public OnPluginStart() {
-  RegConsoleCmd("sm_google", google, "Google");
-  RegConsoleCmd("sm_bing", bing, "Bing");
+  RegConsoleCmd("sm_web", info, "[-Navy-] |WEB|");
+  RegConsoleCmd("sm_google", google, "[-Navy-] |WEB| Google");
+  RegConsoleCmd("sm_bing", bing, "[-Navy-] |WEB| Bing");
 }
 
 // Plugin Info
 public Action:info(client, args)
 {
- ShowMOTDPanel(client, "[|GOOGLE|]", "http://Google.com", MOTDPANEL_TYPE_URL)
- return Plugin_Handled;
+  PrintToChat(client, "This server has version: "
 }
 
+
+// Plugin Bing
+public Action:bing(client, args)
+{
+ ShowMOTDPanel(client, "[|Bing|]", "http://Bing.com", MOTDPANEL_TYPE_URL)
+ return Plugin_Handled;
+}
 // Google.com
 public Action:google(client, args)
 {
