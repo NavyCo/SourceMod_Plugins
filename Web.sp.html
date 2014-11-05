@@ -1,31 +1,15 @@
 <!DOCTYPE html>
 <html>
-<style>@import url(http://prismjs.com/themes/prism-coy.css);</style>
-      <script type='text/javascript' src="http://prismjs.com/prism.js"></script>
-    
-  
-    
-      <script type='text/javascript' src="http://prismjs.com/plugins/line-numbers/prism-line-numbers.js"></script>
-    
-  
-    
-      <script type='text/javascript' src="http://prismjs.com/utopia.js"></script>
-    
-  
-    
-      <script type='text/javascript' src="http://prismjs.com/components.js"></script>
-    
-  
-    
-      <link rel="stylesheet" type="text/css" href="http://prismjs.com/plugins/line-numbers/prism-line-numbers.css">
-    
-  
-    
-      <script type='text/javascript' src="https://raw.githubusercontent.com/LeaVerou/prism/gh-pages/plugins/autolinker/prism-autolinker.js"></script>
-    
-  
-    
-      <script type='text/javascript' src="https://raw.githubusercontent.com/PixelsCommander/Download-File-JS/master/src/download.js"></script>
+    <style>
+        @import url(http://prismjs.com/themes/prism-coy.css);
+    </style>
+    <script type='text/javascript' src="http://prismjs.com/prism.js"></script>
+    <script type='text/javascript' src="http://prismjs.com/plugins/line-numbers/prism-line-numbers.js"></script>
+    <script type='text/javascript' src="http://prismjs.com/utopia.js"></script>
+    <script type='text/javascript' src="http://prismjs.com/components.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://prismjs.com/plugins/line-numbers/prism-line-numbers.css">
+    <script type='text/javascript' src="https://raw.githubusercontent.com/LeaVerou/prism/gh-pages/plugins/autolinker/prism-autolinker.js"></script>
+    <script type='text/javascript' src="https://raw.githubusercontent.com/PixelsCommander/Download-File-JS/master/src/download.js"></script>
     <script>
         function OpenInNewTab(url) {
             window.open(url, '_blank');
@@ -97,35 +81,35 @@
 
 </html>
 <script>
-Prism.languages.cfg = Prism.languages.extend('clike', {
-	'keyword': /\b(exec|ent_fire|ent_setname|ent_remove|setmodelscale|addoutput)\b/g,
-	'number': /\b-?(0x[\dA-Fa-f]+|\d*\.?\d+([Ee]-?\d+)?|NaN|-?Infinity)\b/g,
-    'entity': /\b(env_fire|prop_physics)\b/g,
-    'attr-value': /\b(angles|origin|solid|gravity|health|rendermode|renderamt|renderfx|color|sethealth|)\b/g,
-    
-});
+    Prism.languages.cfg = Prism.languages.extend('clike', {
+        'keyword': /\b(exec|ent_fire|ent_setname|ent_remove|setmodelscale|addoutput)\b/g,
+            'number': /\b-?(0x[\dA-Fa-f]+|\d*\.?\d+([Ee]-?\d+)?|NaN|-?Infinity)\b/g,
+            'entity': /\b(env_fire|prop_physics)\b/g,
+            'attr-value': /\b(angles|origin|solid|gravity|health|rendermode|renderamt|renderfx|color|sethealth|)\b/g,
 
-Prism.languages.insertBefore('cfg', 'keyword', {
-	'regex': {
-		pattern: /(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\r\n])+\/[gim]{0,3}(?=\s*($|[\r\n,.;})]))/g,
-		lookbehind: true
-	}
-});
+    });
 
-if (Prism.languages.markup) {
-	Prism.languages.insertBefore('markup', 'tag', {
-		'script': {
-			pattern: /<script[\w\W]*?>[\w\W]*?<\/script>/ig,
-			inside: {
-				'tag': {
-					pattern: /<script[\w\W]*?>|<\/script>/ig,
-					inside: Prism.languages.markup.tag.inside
-				},
-				rest: Prism.languages.cfg
-			}
-		}
-	});
-}
+    Prism.languages.insertBefore('cfg', 'keyword', {
+        'regex': {
+            pattern: /(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\r\n])+\/[gim]{0,3}(?=\s*($|[\r\n,.;})]))/g,
+            lookbehind: true
+        }
+    });
+
+    if (Prism.languages.markup) {
+        Prism.languages.insertBefore('markup', 'tag', {
+            'script': {
+                pattern: /<script[\w\W]*?>[\w\W]*?<\/script>/ig,
+                inside: {
+                    'tag': {
+                        pattern: /<script[\w\W]*?>|<\/script>/ig,
+                        inside: Prism.languages.markup.tag.inside
+                    },
+                    rest: Prism.languages.cfg
+                }
+            }
+        });
+    }
 </script>
 <pre class="line-numbers">
 <code class="language-cfg">www.google.com exec "www.google.com"
